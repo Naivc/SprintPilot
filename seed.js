@@ -17,7 +17,6 @@ const requisitosData = [
         prioridad: 'medium',
         estado: 'pending',
         responsable: 'María',
-        fechaLimite: new Date('2026-03-20'),
         descripcion: 'Agregar índices y optimizar consultas lentas'
     },
     {
@@ -26,7 +25,6 @@ const requisitosData = [
         prioridad: 'high',
         estado: 'completed',
         responsable: 'Carlos',
-        fechaLimite: new Date('2026-03-10'),
         descripcion: 'Reestructurar página frontend usando Bootstrap'
     },
     {

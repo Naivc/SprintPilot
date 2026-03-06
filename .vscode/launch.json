@@ -9,6 +9,15 @@
             "program": "${workspaceFolder}/src/app.js",
             "envFile": "${workspaceFolder}/.env",
             "console": "integratedTerminal"
+        },
+         {
+            "type": "node",
+            "request": "launch",
+            "name": "Ejecutar Seed",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/seed.js",
+            "envFile": "${workspaceFolder}/.env",
+            "console": "integratedTerminal"
         }
     ]
 }

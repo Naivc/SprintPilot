@@ -4,8 +4,9 @@ const connectDB = async () => {
     try {
         const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/sprintpilot';
         
-        await mongoose.connect(mongoURI);
-        
+        await mongoose.connect(mongoURI, {
+            authSource: 'admin'
+        });        
         console.log('✅ MongoDB Connected successfully');
     } catch (error) {
         console.error('❌ MongoDB connection error:', error.message);
