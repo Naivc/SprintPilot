@@ -6,7 +6,9 @@
     "scripts": {
         "start": "node src/app.js",
         "dev": "nodemon src/app.js",
-        "seed": "node seed.js"
+        "seed": "node seed.js",
+        "lint:js": "eslint .",
+        "lint:ejs": "ejslint ./public/**/*.ejs"
     },
     "dependencies": {
         "dotenv": "^17.3.1",
