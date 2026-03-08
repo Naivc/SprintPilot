@@ -2,15 +2,10 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 
-const connectDB = require('./config/database');
 const viewRoutes = require('./routes/views');
 const apiRoutes = require('./routes/api');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Connect to MongoDB
-connectDB();
 
 // View engine setup
 app.set('view engine', 'ejs');
@@ -31,7 +26,4 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: 'Internal Server Error' });
 });
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+module.exports = app;

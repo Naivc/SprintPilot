@@ -4,9 +4,11 @@
     "description": "SprintPilot application",
     "main": "index.js",
     "scripts": {
-        "start": "node src/app.js",
-        "dev": "nodemon src/app.js",
+           "start": "node src/server.js",
+           "dev": "nodemon src/server.js",
         "seed": "node seed.js",
+        "test": "jest",
+        "test:watch": "jest --watch",
         "lint:js": "eslint .",
         "lint:ejs": "ejslint ./public/**/*.ejs"
     },
@@ -23,7 +25,9 @@
         "eslint": "^10.0.2",
         "globals": "^17.4.0",
         "jest": "^30.2.0",
-        "nodemon": "^3.0.1"
+        "nodemon": "^3.0.1",
+        "supertest": "^7.2.2",
+        "mongodb-memory-server": "^11.0.1"
     },
     "keywords": [],
     "author": "",
