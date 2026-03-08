@@ -1,7 +1,7 @@
 const request = require('supertest');
 const mongoose = require('mongoose');
 const { connect, closeDatabase, clearDatabase } = require('./db-handler');
-const app = require('../src/app');
+const app = require('../../src/app');
 
 describe('Requisito API Tests', () => {
   beforeAll(async () => {

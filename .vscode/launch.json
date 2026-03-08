@@ -5,19 +5,37 @@
             "type": "node",
             "request": "launch",
             "name": "Iniciar Servidor",
-            "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/app.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/server.js",
             "envFile": "${workspaceFolder}/.env",
             "console": "integratedTerminal"
         },
-         {
+        {
             "type": "node",
             "request": "launch",
             "name": "Ejecutar Seed",
-            "skipFiles": ["<node_internals>/**"],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "program": "${workspaceFolder}/seed.js",
             "envFile": "${workspaceFolder}/.env",
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run All Tests (Jest)",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "test",
+                "--",
+                "--runInBand"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
